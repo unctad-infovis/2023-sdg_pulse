@@ -1,0 +1,580 @@
+<html>
+<head>
+<title>SDGPulse 2023 Charts</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.1.0/highcharts.min.js" integrity="sha512-y42ffyTTnrhiCZBAZ8OFyrekmkBEu2HaonoiZdohGBvaimWK970YQl4tWX0Y4pnTpqooFs6+xLuApbzA0pmbwg==" crossorigin="anonymous" id="highcharts-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.1.0/modules/data.min.js" integrity="sha512-e39WfZNgM+gzEfuj42eKCl9gb7WTeQFzKC+DW9+4KOd0ua5fLOpTQGFOCTDJ1GuvqcT5w2rBxUtCoeu4xUh/eQ==" crossorigin="anonymous" id="highcharts-data-js"></script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap);
+body { 
+	font-family: roboto;
+    margin: 30px;
+}
+</style>
+</head>
+<body>
+<h1>SDGPulse 2023 Charts</h1>
+<h2>T2_3_Fig1: Total external debt of developing countries continues to rise</h2>
+<div id="T2_3_Fig1" width="100%"></div>
+<h2>T1_3_Fig3: Cereals are a big part of what we trade - it is even bigger part of what we eat</h2>
+<div id="T1_3_Fig3" width="100%"></div>
+<h2>T4_1_Fig3abc: LDCs, LLDCs and SIDS experience the largest human and economic impacts of disasters.</h2>
+<table width="100%" border="0">
+	<tr>
+		<td width="33.3%" id="T4_1_Fig3a"></td>
+		<td width="33.3%" id="T4_1_Fig3b"></td>
+		<td width="33.3%" id="T4_1_Fig3c"></td>
+	</tr>
+</table>
+<h2>T3_1_Fig6: Many developing economies catching up with developed in high-tech intensity of exports</h2>
+<div id="T3_1_Fig6" width="100%"></div>
+<script>
+Highcharts.chart('T2_3_Fig1', {
+  chart: {
+    type: "column",
+    height: 350,
+    marginTop: 40,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  xAxis: {
+  	title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    },
+    type: "category",
+    tickInterval: 5
+  },
+  tooltip: {
+    valueDecimals: 1,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)",
+    valueDecimals: 0
+  },
+  colors: [
+    "#931831",
+    "#72BF44",
+    "#AEA29A"
+  ],
+  plotOptions: {
+    series: {
+      stacking: "normal"
+    }
+  },
+  yAxis: {
+	title: {
+      enabled: false
+    },
+    labels: {
+      format: "{value:.,0f}",
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash",
+    reversedStacks: false
+  },
+  legend: {
+	enabled: true,
+    symbolHeight: 7,
+    symbolWidth: 12,
+    symbolRadius: 0.1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    },
+    align: "right",
+    y: 20,
+    layout: "proximate",
+    squareSymbol: false
+  },
+  data: {
+    csv: "Year,PPG long-term debt,PNG long-term debt,Short-term debt\n2000,1205.4564803806,513.6069389775,312.5582464957\n2001,1186.8227895518,521.361088636801,324.398226508\n2002,1242.7652510248,490.0704830997,321.9489197721\n2003,1297.150589287,584.478187656401,436.0469808002\n2004,1340.3799543462,628.5199108145,524.7101478516\n2005,1259.9973838894,698.0252560211,609.6316499435\n2006,1226.0635008746,867.056607947001,702.6184206578\n2007,1346.1889988173,1126.9049106585,867.8130283825\n2008,1432.4061048299,1348.6621639784,910.2872471971\n2009,1546.8328082779,1392.740291352,974.938591847401\n2010,1689.6184815531,1592.5895265566,1452.384552695\n2011,1812.5562889265,1907.4961147582,1765.0465203845\n2012,2001.8900992887,2209.685752532,1951.0159456639\n2013,2155.271293615,2441.0241302723,2347.3962481491\n2014,2384.5183906049,2739.0057430819,2519.9156337987\n2015,2472.1120709826,2829.4833402923,2039.4924157197\n2016,2700.5723788585,3033.0232240576,1995.3073749304\n2017,3058.2696216681,3222.3183009716,2343.0499851808\n2018,3302.8854160338,3294.4296262501,2591.8458806996\n2019,3549.637761918,3546.7459951135,2625.7318037694\n2020,3826.201448088,3726.2971494302,2628.2256633307\n2021,4000.4313581716,3782.7142138758,2980.166684373\n2022,4034.09238234577,3768.16936677714,3155.18119573572\n"
+  }
+});
+
+Highcharts.chart('T1_3_Fig3', {
+  chart: {
+    type: "bar",
+    height: 450,
+    marginTop: 40,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  tooltip: {
+    valueDecimals: 1,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)"
+  },
+  yAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash",
+    max: 50,
+    tickInterval: 10
+  },
+  plotOptions: {
+    series: {
+      pointPadding: 0
+    }
+  },
+  xAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    },
+    type: "category",
+    zIndex: 5
+  },
+  legend: {
+    enabled: true,
+    symbolWidth: 12,
+    symbolHeight: 12,
+    symbolRadius: 1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    }
+  },
+  data: {
+    csv: "Group,Export value,Supply in kcal\n\"Vegetables, fruits and treenuts\",22.5827423247134,15.4034887006623\nCereals,15.4910352530579,45.3834331516158\nMeat,13.0012715858196,8.27032950371131\nFish and seafood,12.0434932915784,1.34392854435309\nAnimal and vegetable fats,9.18620498054052,11.3496488555932\nDairy and eggs,8.03352516478031,7.77342053936332\nOilcrops,7.29386320517042,2.48109885111339\nSugar and sweeteners,3.75406533602107,7.92573244105667\nMiscellaneous,8.61379885831839,0.0689194125309276\n"
+  },
+  colors: [
+    "#DD0979",
+    "#009edb"
+  ]
+});
+
+Highcharts.chart('T4_1_Fig3a', {
+  chart: {
+    marginTop: 55,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  series: [
+    {
+      type: "column",
+      showInLegend: false
+    },
+    {
+      type: "line"
+    }
+  ],
+  xAxis: {
+    type: "category",
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    }
+  },
+  yAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      format: "{value:.,0f}",
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash"
+  },
+  colors: [
+    "#72BF44",
+    "#006747"
+  ],
+  plotOptions: {
+    line: {
+      marker: {
+        enabled: false
+      }
+    },
+    series: {
+      pointPadding: 0,
+      groupPadding: 0.15
+    },
+    bar: {
+      borderWidth: 0
+    }
+  },
+  subtitle: {
+    enabled: true,
+    text: "Disaster affected people<br>per 100 000 population (average 2012-2021)",
+    labels: {
+      rotation: 0
+    }
+  },
+  tooltip: {
+    valueDecimals: 0,
+    outside: true,
+    shared: true,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)"
+  },
+  legend: {
+    enabled: true,
+    symbolWidth: 12,
+    symbolHeight: 12,
+    symbolRadius: 1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    }
+  },
+  data: {
+    csv: "Group,Disaster affected people per 100 000 population (average 2012-2021),Global average\nLDCs,2512,2113\nLLCDs,3516,2113\nSIDS,2448,2113\n"
+  }
+});
+
+Highcharts.chart('T4_1_Fig3b', {
+  chart: {
+    marginTop: 55,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  series: [
+    {
+      type: "column",
+      showInLegend: false
+    },
+    {
+      type: "line"
+    }
+  ],
+  xAxis: {
+    type: "category",
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    }
+  },
+  yAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash"
+  },
+  colors: [
+    "#009edb",
+    "#004987"
+  ],
+  plotOptions: {
+    line: {
+      marker: {
+        enabled: false
+      }
+    },
+    series: {
+      pointPadding: 0,
+      groupPadding: 0.15
+    },
+    bar: {
+      borderWidth: 0
+    }
+  },
+  subtitle: {
+    enabled: true,
+    text: "Number of deaths and missing persons<br>per 100 000 population (average 2012-2021)",
+    labels: {
+      rotation: 0
+    }
+  },
+  tooltip: {
+    valueDecimals: 2,
+    outside: true,
+    shared: true,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)"
+  },
+  legend: {
+    enabled: true,
+    symbolWidth: 12,
+    symbolHeight: 12,
+    symbolRadius: 1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    }
+  },
+  data: {
+    csv: ",Number of deaths and missing persons per 100 000 population  (average 2012-2021),Global average\nLDCs,1.24,0.86\nLLCDs,1.86,0.86\nSIDS,2.8,0.86\n"
+  }
+});
+
+Highcharts.chart('T4_1_Fig3c', {
+  chart: {
+    marginTop: 55,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  series: [
+    {
+      type: "column",
+      showInLegend: false
+    },
+    {
+      type: "line"
+    }
+  ],
+  xAxis: {
+    type: "category",
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    }
+  },
+  yAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash"
+  },
+  colors: [
+    "#FFC800",
+    "#F08645"
+  ],
+  plotOptions: {
+    line: {
+      marker: {
+        enabled: false
+      }
+    },
+    series: {
+      pointPadding: 0,
+      groupPadding: 0.15
+    },
+    bar: {
+      borderWidth: 0
+    }
+  },
+  subtitle: {
+    enabled: true,
+    text: "Disaster-related economic losses<br>as % of GDP (2021)",
+    labels: {
+      rotation: 0
+    }
+  },
+  tooltip: {
+    valueDecimals: 2,
+    outside: true,
+    shared: true,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)"
+  },
+  legend: {
+    enabled: true,
+    symbolWidth: 12,
+    symbolHeight: 12,
+    symbolRadius: 1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    }
+  },
+  data: {
+    csv: ",Disaster-related economic losses as % of GDP (2021),Global average\nLDCs,2,0.57\nLLCDs,1.7,0.57\nSIDS,2.8,0.57\n"
+  }
+});
+
+Highcharts.chart('T3_1_Fig6', {
+  chart: {
+    type: "column",
+    marginTop: 20,
+    height: 350,
+    marginTop: 40,
+    style: {
+      fontFamily: "Roboto",
+      fontSize: 13
+    }
+  },
+  lang: {
+    numericSymbols: null
+  },
+  title: {
+    style: {
+      display: "none"
+    }
+  },
+  credits: {
+    enabled: false
+  },
+  xAxis: {
+    type: "category",
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 13
+      }
+    }
+  },
+  tooltip: {
+    valueDecimals: 1,
+    followPointer: true,
+    backgroundColor: "rgba(255,255,255,1)"
+  },
+  yAxis: {
+    title: {
+      enabled: false
+    },
+    labels: {
+      style: {
+        fontSize: 12
+      }
+    },
+    allowDecimals: false,
+    gridLineDashStyle: "dash",
+    max: 65,
+    endOnTick: false
+  },
+  colors: [
+    "#AEA29A",
+    "#EC6817"
+  ],
+  legend: {
+    enabled: true,
+    symbolWidth: 12,
+    symbolHeight: 12,
+    symbolRadius: 1,
+    alignColumns: false,
+    padding: 10,
+    itemMarginTop: 3,
+    margin: 5,
+    itemStyle: {
+      fontWeight: "normal",
+      fontSize: 13
+    }
+  },
+  data: {
+    csv: "Region,2011,2021\nDeveloping economies: Africa,34.4639556401111,41.3090798321767\nDeveloping economies: Americas,51.3955363550405,54.4023017279465\nDeveloping economies: Asia and Oceania,52.5146907877783,58.512499731298\nDeveloped economies,61.3212260760073,62.3834503404603\nLDCs (Least developed countries),10.2193987881217,13.2208381977965\n"
+  }
+});
+</script>
+</body>
