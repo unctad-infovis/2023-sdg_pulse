@@ -81,7 +81,7 @@ function Figure3a() {
           fontWeight: 400
         }
       },
-      colors: ['#009edb', '#72bf44', '#a066aa', '#f58220', '#ffcb05'],
+      colors: ['#009edb', '#f58220'],
       credits: {
         enabled: false
       },

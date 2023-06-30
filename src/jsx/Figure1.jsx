@@ -59,7 +59,7 @@ function Figure1() {
           color: 'rgba(0, 0, 0, 0.8)',
           fontSize: '14px'
         },
-        text: '<em>Source:</em> UNCTAD calculations based on data from <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_WBWZLTCF" target="_blank">World Bank (2023a)</a>, <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_BTG3N29P" target="_blank">IMF (2023)</a> and national sources. <br /><em>Note:</em> <span> Figures for 2022 are UNCTAD estimates. Data does not include IMF credit lines. PPG stands for Publicly guaranteed debt. PNG stands for Publicly non-guaranteed debt.</span>',
+        text: '<em>Source:</em> UNCTAD calculations based on data from <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_WBWZLTCF" target="_blank">World Bank (2023a)</a>, <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_BTG3N29P" target="_blank">IMF (2023)</a> and national sources.<br /><em>Note:</em> <span> Figures for 2022 are UNCTAD estimates. Data does not include IMF credit lines. PPG stands for Publicly guaranteed debt. PNG stands for Publicly non-guaranteed debt.</span>',
         verticalAlign: 'bottom',
         x: 0
       },

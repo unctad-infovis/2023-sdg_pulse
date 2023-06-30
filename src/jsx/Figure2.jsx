@@ -59,7 +59,7 @@ function Figure1() {
           color: 'rgba(0, 0, 0, 0.8)',
           fontSize: '14px'
         },
-        text: '<em>Source:</em> UNCTAD calculations based on data from <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_WBWZLTCF" target="_blank">World Bank (2023a)</a>, <a href="https://sdgpulse.unctad.org/debt-sustainability/#Ref_BTG3N29P" target="_blank">IMF (2023)</a> and national sources. <br /><em>Note:</em> <span> Figures for 2022 are UNCTAD estimates. Data does not include IMF credit lines. PPG stands for Publicly guaranteed debt. PNG stands for Publicly non-guaranteed debt.</span>',
+        text: '<em>Source:</em> UNCTAD calculations bases on UNCTADstat <a href="https://sdgpulse.unctad.org/trade-agriculture-biotrade/#Ref_VCAHNVZB" target="_blank">(UNCTAD, 2023a)</a> and FAOSTAT (<a href="https://sdgpulse.unctad.org/trade-agriculture-biotrade/#Ref_W8MMH9BE" target="_blank">FAO, 2023a)</a>.<br /><em>Note:</em> <span> Food groups include preparations of the main commodity except those preparations that fall in the miscellaneous category. Food products are grouped according to SITC Revision 3 for export value and according to CPC Version 2.1 for supply in calories. Trade in meat excludes live animals sold for raising and slaughter which fall in SITC 00. Total trade value and supply of calories both exclude alcoholic beverages as well as coffee, tea, cocoa and spices. Alcoholic beverages constitute 2%, and stimulants and spices 1% of the total calorie supply including those groups.</span>',
         verticalAlign: 'bottom',
         x: 0
       },
@@ -73,7 +73,7 @@ function Figure1() {
             this.renderer.image('https://storage.unctad.org/2023-ter_report/assets/img/unctad_logo.svg', 5, 15, 80, 100).add();
           }
         },
-        height: 700,
+        height: 800,
         type: 'bar',
         style: {
           color: 'rgba(0, 0, 0, 0.8)',
@@ -218,7 +218,7 @@ function Figure1() {
         crosshairs: true,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">Export value:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 0))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">Supply in kcal:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 0))}</span></div></div>`;
+          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">Export value:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 1))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">Supply in kcal:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 1))}</span></div></div>`;
         },
         shadow: false,
         shared: true,
@@ -229,7 +229,7 @@ function Figure1() {
           description: 'Year'
         },
         allowDecimals: false,
-        categories: ['Vegetables, fruits and treenuts', 'Cereals', 'Meat', 'Fish and seafood', 'Animal and vegetable fats', 'Dairy and eggs', 'Oilcrops', 'Sugar and sweeteners', 'Miscellaneous'],
+        categories: ['Vegetables,<br />fruits and treenuts', 'Cereals', 'Meat', 'Fish and<br />seafood', 'Animal and<br />vegetable fats', 'Dairy and<br />eggs', 'Oilcrops', 'Sugar and<br />sweeteners', 'Miscellaneous'],
         crosshair: {
           color: 'transparent',
           width: 1

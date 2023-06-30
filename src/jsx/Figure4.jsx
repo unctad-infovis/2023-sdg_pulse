@@ -59,7 +59,7 @@ function Figure4() {
           color: 'rgba(0, 0, 0, 0.8)',
           fontSize: '14px'
         },
-        text: '<em>Source:</em> UNCTAD calculations based on the Competitive Industrial Performance Index dataset (<a href="https://sdgpulse.unctad.org/sustainable-industry/#Ref_M3FHIHFV" target="_blank">UNIDO, 2023</a>).<br /><em>Note:</em> LDCs=Least developed countries</span>',
+        text: '<em>Source:</em> UNCTAD calculations based on the Competitive Industrial Performance Index dataset <a href="https://sdgpulse.unctad.org/sustainable-industry/#Ref_M3FHIHFV" target="_blank">(UNIDO, 2023)</a>.<br /><em>Note:</em> LDCs=Least developed countries</span>',
         verticalAlign: 'bottom',
         x: 0
       },
@@ -218,7 +218,7 @@ function Figure4() {
         crosshairs: true,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">2011:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 0))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">2021:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 0))}</span></div></div>`;
+          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">2011:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 1))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">2021:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 1))}</span></div></div>`;
         },
         shadow: false,
         shared: true,

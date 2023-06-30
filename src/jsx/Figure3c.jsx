@@ -81,7 +81,7 @@ function Figure3b() {
           fontWeight: 400
         }
       },
-      colors: ['#009edb', '#72bf44', '#a066aa', '#f58220', '#ffcb05'],
+      colors: ['#a066aa', '#f58220'],
       credits: {
         enabled: false
       },
@@ -232,7 +232,7 @@ function Figure3b() {
         crosshairs: true,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">Economic losses:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 1))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">Global average:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 1))}</span></div></div>`;
+          return `<div class="tooltip_container"><h3 class="tooltip_header">${this.x}</h3><div class="tooltip_row" style="color: ${this.points[0].color}"><span class="tooltip_label">Economic losses:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[0].y, 2))}</span></div><div class="tooltip_row" style="color: ${this.points[1].color}"><span class="tooltip_label">Global average:</span> <span class="tooltip_value">${formatNr(roundNr(this.points[1].y, 2))}</span></div></div>`;
         },
         shadow: false,
         shared: true,
