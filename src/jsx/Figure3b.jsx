@@ -191,7 +191,7 @@ function Figure3b() {
         }]
       },
       series: [{
-        name: 'Number of deaths and missing persons',
+        name: 'Number of persons',
         data: [1.24, 1.86, 2.8]
       }, {
         type: 'line',
