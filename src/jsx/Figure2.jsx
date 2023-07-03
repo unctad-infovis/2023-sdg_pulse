@@ -195,7 +195,7 @@ function Figure1() {
           lineHeight: '18px'
         },
         x: 100,
-        text: 'Billions of current US$, 2000—2022'
+        text: 'Share of US$ value of traded food (2019–2021 average) and calories supplied (2020), by food group, world total, percentage'
       },
       title: {
         align: 'left',
