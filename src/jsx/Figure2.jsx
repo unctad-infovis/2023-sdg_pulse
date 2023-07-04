@@ -208,7 +208,7 @@ function Figure1() {
           lineHeight: '34px'
         },
         x: 100,
-        text: 'External debt of developing countries continues to rise'
+        text: 'Cereals are a big part of what we trade – and an even bigger part of what we eat\''
       },
       tooltip: {
         backgroundColor: '#fff',
